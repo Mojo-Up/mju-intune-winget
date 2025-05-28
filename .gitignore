@@ -1,0 +1,5 @@
+#Ignore Intune Win32 App Packaging Tool
+Packager
+
+#Ignore Build Artifacts
+Build

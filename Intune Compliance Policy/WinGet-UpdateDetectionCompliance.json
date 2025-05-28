@@ -1,0 +1,26 @@
+{
+  "Rules": [
+    {
+      "SettingName": "AppsUpToDate",
+      "Operator": "IsEquals",
+      "DataType": "Boolean",
+      "Operand": "true",       
+      "MoreInfoUrl":"https://www.cyber.gov.au/resources-business-and-government/maintaining-devices-and-systems/system-hardening-and-administration/system-administration/patching-applications-and-operating-systems",
+      "RemediationStrings":[ 
+          { 
+             "Language":"en_US",
+             "Title":"Not all applications are up to date.",
+             "Description": "All applications on this system must updated to most current version. Please refer to the link above"
+          }
+       ]
+    }
+  ],
+  "ComplianceResult": {
+    "Compliant": {
+      "Description": "All applications are up to date."
+    },
+    "NonCompliant": {
+      "Description": "One or more applications require updates. See AppsNeedingUpdate returned from complaince script for details."
+    }
+  }
+}
