@@ -128,6 +128,7 @@ The following steps explain how to deploy and manage a Windows Package Manager p
 Logs for the each app package deployment is currently configured to stored the same location as the Intune Management Engine (IME) Agent logs
 
 Install Log: `C:ProgramData\Microsoft\IntuneManagementExtension\Logs\"Package ID"_Install.log`
+
 Uninstall Log: `C:ProgramData\Microsoft\IntuneManagementExtension\Logs\"Package ID"_Uninstall.log`
 
 ![App Deployment Logs](images/AppDeploymentLogs.png)  
