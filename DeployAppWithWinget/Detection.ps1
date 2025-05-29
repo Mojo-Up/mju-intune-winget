@@ -22,7 +22,7 @@
 #        Variables       #
 ##########################
 
-#Please Update this with the PackageID you want to check
+#Please update this with the PackageID you want to check
 $PackageID = "Google.Chrome"
 
 
