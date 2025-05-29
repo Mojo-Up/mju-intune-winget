@@ -185,7 +185,7 @@ Keep applications up to date by using Intune's Proactive Remediation feature. Th
 
 ### 2.3 Script Remediation Logs
 
-Logs for the each app package deployment is currently configured to stored the same location as the Intune Management Engine (IME) Agent logs
+Logs for the update application remediation script is currently configured to stored the same location as the Intune Management Engine (IME) Agent logs
 
 Update Application Log: `C:ProgramData\Microsoft\IntuneManagementExtension\Logs\WinGet-UpdateApplications.log`
 
