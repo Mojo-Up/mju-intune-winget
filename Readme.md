@@ -24,6 +24,7 @@ This solution helps simplify application lifecycle management and helps meet the
   - [2. Auto-Update Applications with Intune Proactive Remediation Scripts](#2-auto-update-applications-with-intune-proactive-remediation-scripts)
     - [2.1 Customise Remediation Scripts](#21-customise-remediation-scripts)
     - [2.2 Implement Remediation Script Package - Auto Update Windows Package Manager Apps](#22-implement-remediation-script-package---auto-update-windows-package-manager-apps)
+    - [2.3 Script Remediation Logs](#23-script-remediation-logs)
   - [3. Custom Intune Compliance Policy: Application Update Status](#3-custom-intune-compliance-policy-application-update-status)
     - [3.1 Customise Custom Compliance Check Script](#31-customise-custom-compliance-check-script)
     - [3.2 Implement Custom Compliance Policy - Are Windows Package Manager Apps all up to date](#32-implement-custom-compliance-policy---are-windows-package-manager-apps-all-up-to-date)
@@ -86,7 +87,7 @@ $PackageID = "Google.Chrome"
 
 ```
 
-You should now have everything you need to deploy a Windows Package Manger with Intune
+You should now have everything you need to deploy a Windows Package Manger package with Intune
 
 ![Build Artifacts](images/AppDeploymentArtifacts.png)  
 
@@ -180,7 +181,13 @@ Keep applications up to date by using Intune's Proactive Remediation feature. Th
 4. Assign the provided remediation script and configure the desired schedule.
 5. Monitor logs and remediation status in the Intune portal.
    ![Active Remediation Scripts](images/ActiveRemediationScripts.png)
-   ![Monitor Remediation Scripts](images/MonitorRemeditationScript.png)  
+   ![Monitor Remediation Scripts](images/MonitorRemeditationScript.png)
+
+### 2.3 Script Remediation Logs
+
+Logs for the each app package deployment is currently configured to stored the same location as the Intune Management Engine (IME) Agent logs
+
+Update Application Log: `C:ProgramData\Microsoft\IntuneManagementExtension\Logs\WinGet-UpdateApplications.log`
 
 ---
 
