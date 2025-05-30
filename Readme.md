@@ -29,7 +29,6 @@ This solution helps simplify application lifecycle management and helps meet the
     - [3.1 Customise Custom Compliance Check Script](#31-customise-custom-compliance-check-script)
     - [3.2 Implement Custom Compliance Policy - Are Windows Package Manager Apps all up to date](#32-implement-custom-compliance-policy---are-windows-package-manager-apps-all-up-to-date)
   - [Repository Structure](#repository-structure)
-  - [License](#license)
 
 ---
 
@@ -298,10 +297,6 @@ Ensure compliance with ASD Essential 8 application patching controls by using a 
 - `AutoUpdate-AppsWithWinGet/` – Scripts for proactive remediation (auto-update).
 - `Intune Compliance Policy/` – Scripts and JSON for custom compliance.
 - `Readme.md` – This documentation.
-
-## License
-
-MIT License
 
 ---
 
