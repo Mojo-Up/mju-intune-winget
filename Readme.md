@@ -13,9 +13,9 @@ This solution helps simplify application lifecycle management and helps meet the
 
 ---
 
-## Table of Contents
+**Table of Contents**
+
 - [Intune + Windows Package Manager: Automated App Deployment, Updates, and Compliance](#intune--windows-package-manager-automated-app-deployment-updates-and-compliance)
-  - [Table of Contents](#table-of-contents)
   - [1. Deploying Windows Package Manager Applications with Intune](#1-deploying-windows-package-manager-applications-with-intune)
     - [1.1 Create Reusable Intune Win32 App Package](#11-create-reusable-intune-win32-app-package)
     - [1.2 Configure Install detection script](#12-configure-install-detection-script)
