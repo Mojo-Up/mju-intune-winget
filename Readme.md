@@ -104,6 +104,8 @@ The following steps explain how to deploy and manage a Windows Package Manager p
    ![Application Details](images/AddAppDetails.png)  
 5. The install command is: `powershell.exe -executionpolicy bypass -file .\install.ps1 -PackageID "Insert Package ID"`
 **Example:** `powershell.exe -executionpolicy bypass -file .\install.ps1 -PackageID "Google.Chrome"`
+**Example:** This script can also be used to install a package with additional parameters.
+ `powershell.exe -executionpolicy bypass -file .\install.ps1 -PackageID "Microsoft.VisualStudioCode" -Override "/quiet INSTALLDIR=C:\MyApp"`
 6. The uninstall command is: `powershell.exe -executionpolicy bypass -file .\uninstall.ps1 -PackageID "Insert Package ID"`
 **Example:** `powershell.exe -executionpolicy bypass -file .\uninstall.ps1 -PackageID "Google.Chrome"`
    ![Program Details](images/AddProgramDetails.png)  

@@ -17,9 +17,14 @@
         powershell.exe -exectuionpolicy bypass -file .\install.ps1 -PackageID "Adobe.Acrobat.Reader.64-bit"
     .EXAMPLE
         powershell.exe -executionpolicy bypass -file .\install.ps1 -PackageID "Google.Chrome"
+    .EXAMPLE
+        This script can also be used to install a package with additional parameters.
+
+        powershell.exe -executionpolicy bypass -file .\install.ps1 -PackageID "Microsoft.VisualStudioCode" -Override "/quiet INSTALLDIR=C:\MyApp"
 #>
 param (
-	$PackageID
+	[string]$PackageID,
+    [string]$Override
 )
 
 ##########################
@@ -45,8 +50,15 @@ IF ($PackageID){
         if ($Winget.count -gt 1) { $Winget = $Winget[-1] }
 
         # Install requested WinGet package
-        & $Winget install --id $PackageID --silent --accept-source-agreements --accept-package-agreements
-
+        if ($Override) {
+            Write-Host "Using override parameters: $Override" -ForegroundColor Cyan
+            & $Winget install --id $PackageID --silent --accept-source-agreements --accept-package-agreements --override "$($Override)"
+        } else {
+            Write-Host "No override parameters specified." -ForegroundColor Cyan
+            & $Winget install --id $PackageID --silent --accept-source-agreements --accept-package-agreements
+        }
+        Write-Host "Package $($PackageID) installed successfully." -ForegroundColor Green
+        
     }
     Catch {
         Throw "Failed to install package $($_)"
